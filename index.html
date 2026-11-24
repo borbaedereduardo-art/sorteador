@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card">
+        <header class="header">
+            <h1>Sorteador</h1>
+            <p>Sorteador, de números</p>
+        </header>
+
+        <section class="form-group">
+            <div class="inputs-row">
+                <div class="input-box">
+                    <label for="min">Mínimo</label>
+                    <input type="number" id="min" value="1">
+                </div>
+                <div class="input-box">
+                    <label for="max">Máximo</label>
+                    <input type="number" id="max" value="100">
+                </div>
+            </div>
+
+            <div class="checkbox-box">
+                <label for="noRepeat">Não repetir números</label>
+                <input type="checkbox" id="noRepeat">
+            </div>
+        </section>
+
+        <section id="resultContainer" class="result-container hidden">
+            <span class="result-label">Número Sorteado</span>
+            <div id="resultNumber" class="result-number">0</div>
+        </section>
+
+        <button id="btnSortear" class="btn-primary">Sortear Agora</button>
+
+        <section id="historySection" class="history-section hidden">
+            <div class="history-header">
+                <span>Últimos sorteios:</span>
+                <button id="btnLimpar" class="btn-clear">Limpar</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
